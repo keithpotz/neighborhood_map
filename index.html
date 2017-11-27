@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatable" content="IE=edge">
+  <meta name="viewport" content="weidth=device-width, initial-scale=1">
+
+<title>Grand Junction, Colorado!</title>
+
+
+  <link href="css/styles.css" rel="stylesheet" type="text/css"></link>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Atomic+Age');
+</style>
+
+</head>
+
+<body>
+    <div class="container" id="main">
+      <div class="row">
+      </div>
+      <div class="page-header">
+        <h1><span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776;</span>Grand Junction City Map!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <nav class="navbar navbar-light bg-light">
+            <div>
+              <h6> Pick Places In Grand Junction!</h6>
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="night">
+                <input type="checkbox" id="night" class="mdl-checkbox__input" data-bind="checked:placesChecked">
+                <span class="mdl-checkbox__label">Night Stuff!</span>
+              </label>
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="food">
+                    <input type="checkbox" id="food"   data-bind="checked:foodChecked" arial-label="food">
+                  <span class="mdl-checkbox__label">Foooood!</span>
+                </label>
+
+          <nav class="demo-navigation mdl-navigation">
+            <div data-bind="if:foodChecked">
+              <div data-bind="foreach:food, visible: food().length > 0">
+                <a class="mdl-navigation__link"data-bind="text:name,click:$parent.getMarker"></a>
+                <div data-bind="if:rating">
+                  <span class="stars-food" data-bind="text:rating"></span>
+                </div>
+              </div>
+            </div>
+              <div data-bind="if:placesChecked">
+                <div data-bind="foreach:places, visible: places().length > 0">
+                  <a class="mdl-navigation__link" data-bind="text:name,click:$parent.getMarker"></a>
+                  <div data-bind="if:rating">
+                    <span class="stars-places" data-bind="text:rating"></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div id="errorPage"></div>
+          <div id="map"></div>
+
+        <!-- Script for open nav !-->
+        <script>
+        function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/knockout.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmPFtTf5ObEGTgI9kVcev06z9-lOZDFME&callback=init" async defer
+    onerror="errorFn()">
+        </script>
+          </body
+          </html>
