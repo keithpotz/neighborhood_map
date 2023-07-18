@@ -1,13 +1,18 @@
-#${1:Neighborhood Map Project!}
 
-TODO: This is the Udacity Project Neighborhood Map!
 
-##What is this?
+This is the Udacity Project Neighborhood Map!
+
+## What is this?
 This is a single app neighborhood map project for Grand Junction Colorado. This will show awesome nightlife and food in Grand Junction!
 
-## How to use!
-1. Fork it 
-2. Open index.html in your favorite browser.
+## Folder's included here
+
+* **css/**: The css folder contains a style.css file which you may or may not need to edit
+* **images/**: The images folder contains the png image files, which are used when displaying the marker icons. The images for the matkers are going to be loaded from this folder.
+* **js/**: This also contains the view folder which is a representation of all the views for the project
+* **index.html**: opening index.html should load the map
+* **README.md**: Contains a description of the project and attributions
+
 
 
 ##What was Used
