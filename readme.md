@@ -15,7 +15,7 @@ This is a single app neighborhood map project for Grand Junction Colorado. This 
 
 
 
-##What was Used
+## What was Used
 
 1. [Google Map API](https://devlopers.google.com/map)
 2. [Foursqure API](https://foursquare.com/developers)
